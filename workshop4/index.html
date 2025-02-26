@@ -12,9 +12,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
+    <a-scene embedded arjs vr-mode-ui="enabled: false" raycaster cursor="rayOrigin: mouse" renderer="antialias: true; alpha: true">
         <a-camera gps-camera simulateLatitude="43.0841188" simulateLongitude="-77.6762643"></a-camera>
     </a-scene>
     <script src="script.js"></script>
+    <script>
+        AFRAME.registerComponent('clicker', {
+              init: function() {
+                  this.el.addEventListener('click', e => {
+                      alert('Model clicked!');
+                  });
+              }
+          });
+    </script>
 </body>
 </html>

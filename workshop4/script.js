@@ -1,3 +1,4 @@
+// Part 1 Code 
 // // For testing puroposes, you may need to change these places to something closer to you
 // const places = [
 //     { name: "Rochester Abandoned Subway", latitude: 43.154722, longitude: -77.609722 },
@@ -70,6 +71,7 @@ const loadPlaces = (places) => {
         entity.setAttribute("gps-entity-place", `latitude: ${place.latitude}; longitude: ${place.longitude}`);
         entity.setAttribute("geometry", "primitive: sphere; radius: 1");
         entity.setAttribute("material", "color: blue");
+        entity.setAttribute("clicker");
 
         const text = document.createElement("a-text");
         text.setAttribute("value", place.name);
